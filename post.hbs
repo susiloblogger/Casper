@@ -88,6 +88,12 @@ into the {body} of the default.hbs template --}}
               {{tags separator=" "}}
             </div>
           {{/if}}
+        </section>
+        {{!-- Email subscribe form at the bottom of the page --}}
+        {{#if @labs.members}}
+          {{> subscribe-form}}
+        {{/if}}
+        <section class="post-full-comments">
           {{!-- Disqus Comments Block --}}
           <div id="disqus_thread"></div>
           <script>
@@ -104,15 +110,7 @@ into the {body} of the default.hbs template --}}
           </script>
           <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
               Disqus.</a></noscript>
-          <div class="fb-comments" data-href="{{@site.url}}{{url}}" data-numposts="10" data-width="100%"></div>
         </section>
-        {{!-- Email subscribe form at the bottom of the page --}}
-        {{#if @labs.members}}
-          {{> subscribe-form}}
-        {{/if}}
-        {{!-- <section class="post-full-comments">
-          No comments here!
-        </section> --}}
       </article>
     </div>
   </main>
@@ -160,6 +158,7 @@ into the {body} of the default.hbs template --}}
         {{/prev_post}}
       </div>
     </div>
+    {{> site-footer}}
   </aside>
 {{/post}}
 {{!-- The #contentFor helper here will send everything inside it up to the matching #block helper found in default.hbs --}}
