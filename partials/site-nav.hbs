@@ -23,14 +23,16 @@
       <div class="social-links">
         {{#if @site.facebook}}
           <a class="social-link social-link-fb" href="{{facebook_url @site.facebook}}" title="Facebook" target="_blank"
-            rel="noopener">{{> "icons/facebook"}}</a>
+            rel="noopener">{{> "icons/facebook-me"}}</a>
         {{/if}}
-        <a class="social-link social-link-ig" href="https://www.instagram.com/abiusamah.id" title="Instagram"
-          target="_blank" rel="noopener">{{> "icons/instagram"}}</a>
         {{#if @site.twitter}}
           <a class="social-link social-link-tw" href="{{twitter_url @site.twitter}}" title="Twitter" target="_blank"
-            rel="noopener">{{> "icons/twitter"}}</a>
+            rel="noopener">{{> "icons/twitter-me"}}</a>
         {{/if}}
+        <a class="social-link social-link-ig" href="https://www.instagram.com/meenistryid" title="Instagram"
+          target="_blank" rel="noopener">{{> "icons/instagram-me"}}</a>
+        <a class="social-link social-link-li" href="https://www.linkedin.com/in/meenistry-id-305883179" title="LinkedIn"
+          target="_blank" rel="noopener">{{> "icons/linkedin-me"}}</a>
       </div>
       {{#unless @labs.members}}
         <a class="rss-button" href="https://feedly.com/i/subscription/feed/{{@site.url}}/rss/" title="RSS"

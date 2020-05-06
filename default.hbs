@@ -9,11 +9,10 @@
   <title>{{meta_title}}</title>
   <meta name="HandheldFriendly" content="True" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta property="fb:app_id" content="237878880617825" />
-  <meta property="fb:admins" content="1357612563" />
   {{!-- Styles'n'Scripts --}}
   <link rel="stylesheet" type="text/css" href="{{asset "built/screen.css"}}" />
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300&display=swap"
+  <link
+    href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap"
     rel="stylesheet">
   {{!-- This tag outputs SEO meta+structured data and other important settings --}}
   {{ghost_head}}
@@ -25,35 +24,13 @@
       }); var f = d.getElementsByTagName(s)[0],
         j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
           'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-    })(window, document, 'script', 'dataLayer', 'GTM-PDR6F44');</script>
+    })(window, document, 'script', 'dataLayer', 'GTM-WXVSJQ8');</script>
   <!-- End Google Tag Manager -->
 </head>
 
 <body class="{{body_class}}">
-  {{!-- Facebook Analytics --}}
-  <script>
-    window.fbAsyncInit = function () {
-      FB.init({
-        appId: '237878880617825',
-        cookie: true,
-        xfbml: true,
-        version: 'v6.0'
-      });
-
-      FB.AppEvents.logPageView();
-
-    };
-
-    (function (d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) { return; }
-      js = d.createElement(s); js.id = id;
-      js.src = "https://connect.facebook.net/en_US/sdk.js";
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
-  </script>
   <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PDR6F44" height="0" width="0"
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WXVSJQ8" height="0" width="0"
       style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
   <div class="site-wrapper">
@@ -64,12 +41,13 @@
       <div class="site-footer-content inner">
         <section class="copyright"><a href="{{@site.url}}">{{@site.title}}</a> &copy; {{date format="YYYY"}}</section>
         <nav class="site-footer-nav">
-          <a href="http://abiusamah.com/tentang-privasi-pribadi/">Privasi Pribadi</a>
+          <a href="http://meenistry.com" target="_blank">Meenistry</a>
+          <a href="https://meenistry.com/privacy-policy" target="_blank">Ketentuan Privasi</a>
           {{#if @site.facebook}}<a href="{{facebook_url @site.facebook}}" target="_blank"
               rel="noopener">Facebook</a>{{/if}}
           {{#if @site.twitter}}<a href="{{twitter_url @site.twitter}}" target="_blank" rel="noopener">Twitter</a>{{/if}}
-          <a href="https://www.instagram.com/abiusamah.id" target="_blank" rel="noopener">Instagram</a>
-          <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a>
+          <a href="https://www.instagram.com/meenistryid" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://www.linkedin.com/in/meenistry-id-305883179" target="_blank" rel="noopener">LinkedIn</a>
         </nav>
       </div>
     </footer>
@@ -153,9 +131,7 @@
   {{{block "scripts"}}}
   {{!-- Ghost outputs important scripts and data with this tag - it should always be the very last thing before the closing body tag --}}
   {{ghost_foot}}
-  <div id="fb-root"></div>
-  <script async defer crossorigin="anonymous"
-    src="https://connect.facebook.net/id_ID/sdk.js#xfbml=1&version=v6.0&appId=237878880617825&autoLogAppEvents=1"></script>
+  <script id="dsq-count-scr" src="//meenistry.disqus.com/count.js" async></script>
 </body>
 
 </html>
