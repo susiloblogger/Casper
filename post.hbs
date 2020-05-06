@@ -88,20 +88,19 @@ into the {body} of the default.hbs template --}}
               {{tags separator=" "}}
             </div>
           {{/if}}
-          <div class="fb-comments" data-href="{{@site.url}}{{url}}" data-numposts="10" data-width="100%"></div>
         </section>
         {{!-- Email subscribe form at the bottom of the page --}}
         {{#if @labs.members}}
           {{> subscribe-form}}
         {{/if}}
-        {{!-- <section class="post-full-comments">
-          No comments here!
-        </section> --}}
+        <section class="post-full-comments">
+          <div class="fb-comments" data-href="{{@site.url}}{{url}}" data-numposts="10" data-width="100%"></div>
+        </section>
       </article>
     </div>
   </main>
   {{!-- Links to Previous/Next posts --}}
-  <aside class="read-next outer">
+  <aside class="read-next outer shadow">
     <div class="inner">
       <div class="read-next-feed">
         {{#if primary_tag}}
@@ -144,6 +143,7 @@ into the {body} of the default.hbs template --}}
         {{/prev_post}}
       </div>
     </div>
+    {{> site-footer}}
   </aside>
 {{/post}}
 {{!-- The #contentFor helper here will send everything inside it up to the matching #block helper found in default.hbs --}}
