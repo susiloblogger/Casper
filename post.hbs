@@ -85,10 +85,11 @@ into the {body} of the default.hbs template --}}
           {{#if tags}}
             <div class="post-tags">
               <span class="post-info-label">{{t "#Tags:"}}</span>
-              {{tags separator=" "}}
+              {{tags separator=",  "}}
             </div>
           {{/if}}
         </section>
+        <div id="ads1"></div>
         {{!-- Email subscribe form at the bottom of the page --}}
         {{#if @labs.members}}
           {{> subscribe-form}}
@@ -100,7 +101,7 @@ into the {body} of the default.hbs template --}}
     </div>
   </main>
   {{!-- Links to Previous/Next posts --}}
-  <aside class="read-next outer shadow">
+  <aside class="read-next outer">
     <div class="inner">
       <div class="read-next-feed">
         {{#if primary_tag}}

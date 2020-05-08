@@ -3,18 +3,22 @@
 
 :root {
     /* Colours */
-    --blue: #3eb0ef;
+    --blue: #4683CE;
+    --darkblue: #3675C8;
+    --bluepro: #030649;
+    --bluetale: #546B82;
+    --blackjet: #333333;
+    --blackpro: #313b3f;
+    --lightgrey: #BEBFC3;
+    --darkgrey: #072638;
+    --whitegrey: #e5eff5;
+    --midgrey: #8d969a;
     --green: #a4d037;
     --purple: #ad26b4;
     --yellow: #fecd35;
     --red: #f05230;
-    --darkgrey: #15171a;
-    --midgrey: #738a94;
-    --lightgrey: #c5d2d9;
-    --whitegrey: #e5eff5;
     --pink: #fa3a57;
     --brown: #a3821a;
-    --darkmode: color(var(--darkgrey) l(+2%));
 }
 
 /* Reset
@@ -330,8 +334,8 @@ html {
 
 body {
     overflow-x: hidden;
-    color: color(var(--midgrey) l(-30%));
-    font-family: 'Open Sans', 'Helvetica Neue', sans-serif, -apple-system, BlinkMacSystemFont;
+    color: color(var(--blackjet) l(35%));
+    font-family: 'Source Sans Pro', sans-serif;
     font-size: 1.6rem;
     line-height: 1.6em;
     font-weight: 400;
@@ -481,7 +485,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'Open Sans', 'Helvetica Neue', sans-serif, -apple-system, BlinkMacSystemFont;
+    font-family: 'Source Sans Pro', sans-serif;
     margin-top: 0;
     line-height: 1.15;
     font-weight: 600;
@@ -519,13 +523,13 @@ h3 {
 
 @media (max-width: 500px) {
     h3 {
-        font-size: 1.7rem;
+        font-size: 2.1rem;
     }
 }
 
 h4 {
     margin: 1.5em 0 0.5em 0;
-    font-size: 1.6rem;
+    font-size: 2rem;
     font-weight: 500;
 }
 

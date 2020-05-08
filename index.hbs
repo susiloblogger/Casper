@@ -16,6 +16,7 @@ into the {body} of the default.hbs template --}}
       </h1>
       <h2 class="site-description">{{@site.description}}</h2>
     </div>
+    <div id="ads1"></div>
   </div>
   </div>
 </header>
@@ -30,12 +31,12 @@ into the {body} of the default.hbs template --}}
     </div>
   </div>
 </main>
-{{!-- The 3 column footer gets inserted here --}}
-<aside class="footer-block outer shadow">
-  {{> site-footer}}
-</aside>
 {{> site-header}}
 {{!-- The #contentFor helper here will send everything inside it up to the matching #block helper found in default.hbs --}}
+{{!-- The 3 column footer gets inserted here --}}
+<aside class="footer-block outer">
+  {{> site-footer}}
+</aside>
 {{#contentFor "scripts"}}
   <script>
 

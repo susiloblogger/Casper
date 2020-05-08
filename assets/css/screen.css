@@ -95,8 +95,7 @@ body {
 
     .home-template .post-feed,
     .tag-template .post-feed,
-    .author-template .post-feed,
-    .footer-column-wrapper {
+    .author-template .post-feed {
         padding-top: 40px;
         /* padding: 40px 0 5vw; */
         border-top-left-radius: 3px;
@@ -118,7 +117,7 @@ body {
     padding-bottom: 12px;
     color: #fff;
     background: rgb(75, 197, 255);
-    background: linear-gradient(0deg, rgba(75, 197, 255, 1) 0%, rgba(39, 166, 228, 1) 70%, rgba(22, 154, 218, 1) 100%);
+    background: linear-gradient(color(var(--darkblue) l(-1%)) 0%, var(--blue) 100%);
     background-size: cover;
 }
 
@@ -168,6 +167,7 @@ body {
     margin: 0 0 0 -2px;
     padding: 0;
     font-size: 5.0rem;
+    color: var(--whitegrey);
     line-height: 1em;
     font-weight: 600;
 }
@@ -198,7 +198,7 @@ body {
 }
 
 .site-home-header .site-header-content {
-    padding: 5vw 3vw 6vw;
+    padding: 2vw 3vw 2vw;
 }
 
 .site-home-header .site-title {
@@ -227,20 +227,19 @@ body {
 .site-archive-header .no-image {
     padding-top: 0;
     padding-bottom: 0;
-    color: var(--darkgrey);
+    background: var(--blue);
     background: #fff;
     opacity: 1.0;
 }
 
 .site-archive-header .no-image .site-description {
-    color: var(--midgrey);
+    color: var(--lightgrey);
     opacity: 1.0;
 }
 
-
 .site-archive-header .no-image .site-header-content {
-    padding: 5vw 0 10px;
-    border-bottom: 1px solid color(var(--lightgrey) l(+12%));
+    padding: 5vw 0 3vw;
+    /* border-bottom: 1px solid color(var(--lightgrey) l(+12%)); */
 }
 
 
@@ -287,8 +286,7 @@ body {
     right: 0;
     left: 0;
     z-index: 1000;
-    background: #169ada;
-    /* background: color(var(--darkgrey) l(-5%)); */
+    background: var(--blue);
 }
 
 .site-nav {
@@ -321,7 +319,6 @@ body {
 .site-header-background:not(.responsive-header-img) .site-nav-left-wrapper:after,
 .site-nav-main .site-nav-left-wrapper:after {
     right: 0;
-    /* background: linear-gradient(to right, color(var(--darkgrey) l(-5%) a(0)) 0%, color(var(--darkgrey) l(-5%)) 100%); */
 }
 
 .site-nav-left {
@@ -468,6 +465,62 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     transform: translateY(0);
 }
 
+.nav-page {
+    margin: 0 0 0 -5px;
+    padding: 0;
+    list-style: none;
+    transition: all 1.0s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.nav-page li {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-page li a {
+    position: relative;
+    font-weight: 600;
+    display: block;
+    padding: 0 4px 12px;
+    color: #fff;
+    opacity: 0.8;
+    transition: opacity 0.35s ease-in-out;
+}
+
+.nav-page li a:hover {
+    text-decoration: none;
+    opacity: 1;
+}
+
+.nav-sponsor {
+    margin: 0 0 0 -5px;
+    padding: 0;
+    list-style: none;
+    transition: all 1.0s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.nav-sponsor li {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-sponsor li a {
+    position: relative;
+    font-weight: 600;
+    display: block;
+    padding: 0 4px 12px;
+    color: #fff;
+    opacity: 0.8;
+    transition: opacity 0.35s ease-in-out;
+}
+
+.nav-sponsor li a:hover {
+    text-decoration: none;
+    opacity: 1;
+}
+
 .site-nav-right {
     flex: 0 1 auto;
     display: flex;
@@ -551,6 +604,17 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     opacity: 0.8;
 }
 
+.subscribe-footer {
+    display: block;
+    margin: 20px 0 30px;
+    padding: 6px 10px !important;
+    border: #fff 1px solid;
+    color: #fff;
+    line-height: 1em;
+    border-radius: 10px;
+    opacity: 0.8;
+}
+
 .subscribe-button:hover {
     text-decoration: none;
     opacity: 1;
@@ -578,7 +642,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
 /* Special behaviors for home navigation */
 
 .home-template .site-nav-main {
-    z-index: 100;
+    z-index: 101;
 }
 
 .home-template .site-nav-main .site-nav {
@@ -705,8 +769,8 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
 
 .post-card-excerpt {
     max-width: 56em;
-    color: var(--midgrey);
-    font-family: 'Open Sans', 'Helvetica Neue', sans-serif, -apple-system, BlinkMacSystemFont;
+    color: color(var(--blackjet) l(35%));
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 .post-card-excerpt p {
@@ -795,7 +859,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     display: flex;
     flex-direction: column;
     margin: 2px 0 0 6px;
-    color: color(var(--midgrey) l(+10%));
+    color: color(var(--midgrey) l(+1%));
     font-size: 1.2rem;
     line-height: 1.4em;
     font-weight: 400;
@@ -999,7 +1063,7 @@ make sure this only happens on large viewports / desktop-ish devices.
 .post-full-custom-excerpt {
     margin: 20px 0 0;
     color: var(--midgrey);
-    font-family: 'Open Sans', 'Helvetica Neue', sans-serif, -apple-system, BlinkMacSystemFont;
+    font-family: 'Source Sans Pro', sans-serif;
     font-size: 2.3rem;
     line-height: 1.4em;
     font-weight: 300;
@@ -1030,9 +1094,9 @@ make sure this only happens on large viewports / desktop-ish devices.
 .post-full-content {
     position: relative;
     margin: 0 auto;
-    padding: 0 170px 6vw;
+    padding: 0 170px 3vw;
     min-height: 230px;
-    font-family: 'Open Sans', 'Helvetica Neue', sans-serif, -apple-system, BlinkMacSystemFont;
+    font-family: 'Source Sans Pro', sans-serif;
     font-size: 1.8rem;
     line-height: 1.6em;
     background: #fff;
@@ -1040,7 +1104,7 @@ make sure this only happens on large viewports / desktop-ish devices.
 
 .post-tags,
 .fb-comments {
-    font-family: 'Open Sans', 'Helvetica Neue', sans-serif, -apple-system, BlinkMacSystemFont;
+    font-family: 'Source Sans Pro', sans-serif;
     margin: 20px 0;
 }
 
@@ -1289,7 +1353,7 @@ Usage (In Ghost editor):
 .post-full-content h5,
 .post-full-content h6 {
     color: color(var(--darkgrey) l(-5%));
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 .post-full-content h1 {
@@ -1376,7 +1440,7 @@ Usage (In Ghost editor):
     padding: 0.4em 1em 0.9em;
     border: 0;
     color: var(--blue);
-    font-family: 'Open Sans', 'Helvetica Neue', sans-serif, -apple-system, BlinkMacSystemFont;
+    font-family: 'Source Sans Pro', sans-serif;
     font-size: 3.2rem;
     line-height: 1.35em;
     text-align: center;
@@ -1486,7 +1550,7 @@ Usage (In Ghost editor):
     width: auto;
     border-spacing: 0;
     border-collapse: collapse;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
     font-size: 1.6rem;
     white-space: nowrap;
     vertical-align: top;
@@ -1726,7 +1790,7 @@ Usage (In Ghost editor):
 /* 7.2. Members Subscribe Form
 /* ---------------------------------------------------------- */
 .subscribe-form {
-    margin: 1.5em 0;
+    margin: 0.5em 0;
     padding: 6.5vw 7vw 8vw;
     border: color(var(--lightgrey) l(+10%)) 1px solid;
     text-align: center;
@@ -1897,15 +1961,16 @@ Usage (In Ghost editor):
 /* ---------------------------------------------------------- */
 
 .read-next {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    background: color(var(--darkgrey) l(-5%));
+    /* border-bottom: 1px solid #3d4d54; */
+    background: color(var(--darkgrey) lightness(-1%));
+    z-index: 1;
 }
 
 .read-next-feed {
     display: flex;
     flex-wrap: wrap;
     margin: 0 -25px;
-    padding: 60px 0 0 0;
+    padding: 80px 0 0 0;
 }
 
 .read-next .post-card {
@@ -1924,7 +1989,6 @@ Usage (In Ghost editor):
 
 .read-next .post-card-title {
     color: #fff;
-    opacity: 0.8;
     transition: all 0.2s ease-in-out;
 }
 
@@ -1956,7 +2020,7 @@ Usage (In Ghost editor):
     overflow: hidden;
     margin: 0 25px 50px;
     padding: 25px;
-    background: linear-gradient(color(var(--darkgrey) l(+2%)), color(var(--darkgrey) l(-5%)));
+    background: linear-gradient(color(var(--darkgrey) l(+3%)), color(var(--darkgrey) l(-1%)));
     border-radius: 3px;
 }
 
@@ -2146,7 +2210,7 @@ Usage (In Ghost editor):
 .post-full-content figcaption {
     margin: 1.0em auto 0;
     color: color(var(--midgrey) l(-10%));
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
     font-size: 75%;
     line-height: 1.5em;
     text-align: center;
@@ -2231,7 +2295,7 @@ Usage (In Ghost editor):
     display: flex;
     min-height: 148px;
     color: var(--darkgrey);
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
     text-decoration: none;
     border-radius: 3px;
     box-shadow: 0 2px 5px -1px rgba(0, 0, 0, 0.15), 0 0 1px rgba(0, 0, 0, 0.09);
@@ -2399,7 +2463,7 @@ Usage (In Ghost editor):
 }
 
 .site-archive-header .no-image .author-header {
-    padding-bottom: 20px;
+    padding-bottom: 3vw;
 }
 
 .author-header-content {
@@ -2447,12 +2511,12 @@ Usage (In Ghost editor):
 }
 
 .no-image .author-header-content .author-bio {
-    color: var(--midgrey);
+    color: var(--lightgrey);
     opacity: 1.0;
 }
 
 .no-image .author-header-content .author-meta {
-    color: var(--midgrey);
+    color: var(--lightgrey);
     opacity: 1.0;
 }
 
@@ -2462,7 +2526,7 @@ Usage (In Ghost editor):
 }
 
 .no-image .author-social-link a {
-    color: #dadada;
+    color: var(--whitegrey);
 }
 
 .author-social-link a:hover {
@@ -2756,7 +2820,7 @@ Usage (In Ghost editor):
     margin: 0 auto 50px;
     max-width: 650px;
     color: #fff;
-    font-family: 'Open Sans', 'Helvetica Neue', sans-serif, -apple-system, BlinkMacSystemFont;
+    font-family: 'Source Sans Pro', sans-serif;
     font-size: 2.4rem;
     line-height: 1.3em;
     font-weight: 300;
@@ -2851,8 +2915,8 @@ Usage (In Ghost editor):
 }
 
 .site-archive-header .no-image {
-    color: rgba(255, 255, 255, 0.9);
-    background: var(--darkmode);
+    color: hsla(0, 0%, 100%, 0.9);
+    background: var(--blue);
 }
 
 .site-archive-header .no-image .site-header-content {
@@ -2860,7 +2924,7 @@ Usage (In Ghost editor):
 }
 
 .site-header-content .author-profile-image {
-    box-shadow: 0 0 0 6px hsla(0, 0%, 100%, 0.04);
+    box-shadow: 0 0 0 6px hsla(0, 0%, 100%, 0.8);
 }
 
 /* 11. Footer Column
@@ -2869,17 +2933,18 @@ Usage (In Ghost editor):
 .footer-block {
     margin-top: -41px;
     z-index: 100;
-    background: #090a0b;
+    background: color(var(--darkgrey) lightness(-1%));
 }
 
 .shadow {
-    -moz-box-shadow: 0 2px 1px 1px #000;
-    -webkit-box-shadow: 0 2px 1px 1px #000;
-    box-shadow: 0 2px 1px 1px #000;
+    -moz-box-shadow: 0px 1px 3px 1px #000;
+    -webkit-box-shadow: 0px 1px 3px 1px #000;
+    box-shadow: 0px 1px 3px 1px #000;
+    z-index: 101;
 }
 
 .footer-column {
-    padding: 60px 0;
+    padding: 60px 0 20px;
     position: relative;
     display: flex;
     flex-wrap: wrap;
@@ -2890,7 +2955,6 @@ Usage (In Ghost editor):
     display: flex;
     flex-wrap: wrap;
     margin: 0 -20px;
-    padding: 50px 0 0;
 }
 
 .col {
@@ -2905,9 +2969,8 @@ Usage (In Ghost editor):
 }
 
 .col-title {
-    padding-bottom: 20px;
+    padding: 20px 0 8px;
     color: #fff;
-    opacity: .8;
     margin: 0 0 .4em;
     line-height: 1.15em;
     transition: color .2s ease-in-out;
@@ -2918,6 +2981,18 @@ Usage (In Ghost editor):
 .col-content p {
     color: hsla(0, 0%, 100%, 0.6);
     text-decoration: none;
+}
+
+.col-content a:hover {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 1);
+}
+
+.col-content.tags a {
+    text-decoration: none;
+    font-size: 1.6;
+    font-weight: 600;
+    line-height: 1.353m;
 }
 
 .new-articles {
@@ -2966,7 +3041,7 @@ Usage (In Ghost editor):
     padding-top: 20px;
     padding-bottom: 60px;
     color: #fff;
-    background: #169ada;
+    background: var(--blue);
     /* background: color(var(--darkgrey) l(-5%)); */
 }
 
@@ -2996,12 +3071,10 @@ Usage (In Ghost editor):
     display: flex;
 }
 
-
 .site-footer-nav a {
     position: relative;
     margin-left: 20px;
 }
-
 
 .site-footer-nav a:before {
     content: "";
@@ -3015,11 +3088,9 @@ Usage (In Ghost editor):
     border-radius: 100%;
 }
 
-
 .site-footer-nav a:first-of-type:before {
     display: none;
 }
-
 
 @media (max-width: 650px) {
     .site-footer-content {
@@ -3030,4 +3101,23 @@ Usage (In Ghost editor):
     .site-footer-nav a:first-child {
         margin-left: 0;
     }
+}
+
+/* 13. Ads Banner
+/* ---------------------------------------------------------- */
+
+#ads1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 2vw 4vw;
+}
+
+.inner.posts #ads1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3vw 2vw 1vw;
 }

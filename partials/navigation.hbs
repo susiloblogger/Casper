@@ -1,0 +1,19 @@
+{{#if isSecondary}}
+  <!-- secondary navigation -->
+  <ul class="nav-sponsor" role="menu">
+    {{#foreach navigation}}
+      <li class="nav-{{slug}}" role="menuitem">
+        <a href="{{url absolute="true"}}">{{label}}</a>
+      </li>
+    {{/foreach}}
+  </ul>
+{{else}}
+  <!-- primary navigation -->
+  <ul class="nav" role="menu">
+    {{#foreach navigation}}
+      <li class="{{link_class for=(url) class=(concat "nav-" slug)}}" role="menuitem">
+        <a href="{{url absolute="true"}}">{{label}}</a>
+      </li>
+    {{/foreach}}
+  </ul>
+{{/if}}

@@ -6,7 +6,7 @@
         <div class="new-articles">
           <ul>
             {{#get "posts"}}
-              {{#foreach posts limit="7"}}
+              {{#foreach posts limit="11"}}
                 <li>
                   <h4><a href="{{url}}">{{title}}</a></h4>
                   <div class="read-next-card-meta">
@@ -21,20 +21,55 @@
       </section>
     </div>
     <div class="col">
-      <h3 class="col-title">#Tags</h3>
-      <section class="col-content">
-        {{#get "tags" limit="20"}}
-          {{tags}}
-        {{/get}}
-      </section>
+      <div class="sponsor">
+        <h3 class="col-title">Tautan Sponsor</h3>
+        {{navigation type="secondary"}}
+      </div>
+      <div class="tags">
+        <h3 class="col-title">#Tags</h3>
+        <section class="col-content tags">
+          {{#get "tags" limit="20"}}
+            {{tags separator=" | "}}
+          {{/get}}
+        </section>
+      </div>
     </div>
     <div class="col">
       <h3 class="col-title">Abi Usamah?</h3>
       <section class="col-content">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste repudiandae modi nihil
-          perspiciatis. Reprehenderit rerum modi, maxime eaque voluptates a nobis harum assumenda laborum neque,
-          repudiandae
-          in numquam iure cum!</p>
+        <p style="text-align: justify;">Abi Usamah adalah seorang profesional di bidang digital marketing dan web
+          developer dengan 6+ tahun pengalaman.</p>
+        <p style="text-align: justify;">Blog ini berisi sekelumit cerita Abi Usamah selama bermuamalah di dunia, semoga
+          ada hikmah dan manfaat yang dapat di ambil oleh para pembaca dari ceritanya.</p>
+        <div class="social-links">
+          {{#if @site.facebook}}
+            <a class="social-link social-link-fb" href="{{facebook_url @site.facebook}}" title="Facebook"
+              target="_blank" rel="noopener">{{> "icons/facebook"}}</a>
+          {{/if}}
+          <a class="social-link social-link-ig" href="https://www.instagram.com/abiusamah.id" title="Instagram"
+            target="_blank" rel="noopener">{{> "icons/instagram"}}</a>
+          {{#if @site.twitter}}
+            <a class="social-link social-link-tw" href="{{twitter_url @site.twitter}}" title="Twitter" target="_blank"
+              rel="noopener">{{> "icons/twitter"}}</a>
+          {{/if}}
+          <div class="social-link" style="padding-top: 9px;">
+            <!-- Place this tag where you want the button to render. -->
+            <a class="github-button" href="https://github.com/TryGhost/Ghost" data-show-count="true"
+              aria-label="Star TryGhost/Ghost on GitHub">Star</a></div>
+        </div>
+        {{#unless @labs.members}}
+          <a class="rss-button" href="https://feedly.com/i/subscription/feed/{{@site.url}}/rss/" title="RSS"
+            target="_blank" rel="noopener">{{> "icons/rss"}}</a>
+        {{/unless}}
+        {{#if @labs.members}}
+          <a class="subscribe-footer" href="#subscribe">Subscribe</a>
+        {{/if}}
+        <div class="fb-page" data-href="https://www.facebook.com/abiusamah.me" data-tabs="" data-width="" data-height=""
+          data-small-header="false" data-adapt-container-width="true" data-hide-cover="false"
+          data-show-facepile="flase">
+          <blockquote cite="https://www.facebook.com/abiusamah.me" class="fb-xfbml-parse-ignore"><a
+              href="https://www.facebook.com/abiusamah.me">Abi Usamah - Blog</a></blockquote>
+        </div>
       </section>
     </div>
   </div>
