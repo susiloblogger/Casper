@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-
 # Casper
 
 The default theme for [Ghost](http://github.com/tryghost/ghost/). This is the latest development version of Casper! If you're just looking to download the latest release, head over to the [releases](https://github.com/TryGhost/Casper/releases) page.
@@ -18,18 +16,18 @@ This theme has lots of code comments to help explain what's going on just by rea
 
 **The main files are:**
 
-- `default.hbs` - The parent template file, which includes your global header/footer
-- `index.hbs` - The main template to generate a list of posts, usually the home page
-- `post.hbs` - The template used to render individual posts
-- `page.hbs` - Used for individual pages
-- `tag.hbs` - Used for tag archives, eg. "all posts tagged with `news`"
-- `author.hbs` - Used for author archives, eg. "all posts written by Jamie"
+-   `default.hbs` - The parent template file, which includes your global header/footer
+-   `index.hbs` - The main template to generate a list of posts, usually the home page
+-   `post.hbs` - The template used to render individual posts
+-   `page.hbs` - Used for individual pages
+-   `tag.hbs` - Used for tag archives, eg. "all posts tagged with `news`"
+-   `author.hbs` - Used for author archives, eg. "all posts written by Jamie"
 
 One neat trick is that you can also create custom one-off templates by adding the slug of a page to a template file. For example:
 
-- `page-about.hbs` - Custom template for an `/about/` page
-- `tag-news.hbs` - Custom template for `/tag/news/` archive
-- `author-ali.hbs` - Custom template for `/author/ali/` archive
+-   `page-about.hbs` - Custom template for an `/about/` page
+-   `tag-news.hbs` - Custom template for `/tag/news/` archive
+-   `author-ali.hbs` - Custom template for `/author/ali/` archive
 
 # Development
 
@@ -54,9 +52,9 @@ yarn zip
 
 # PostCSS Features Used
 
-- Autoprefixer - Don't worry about writing browser prefixes of any kind, it's all done automatically with support for the latest 2 major versions of every browser.
-- Variables - Simple pure CSS variables
-- [Color Function](https://github.com/postcss/postcss-color-function)
+-   Autoprefixer - Don't worry about writing browser prefixes of any kind, it's all done automatically with support for the latest 2 major versions of every browser.
+-   Variables - Simple pure CSS variables
+-   [Color Function](https://github.com/postcss/postcss-color-function)
 
 # SVG Icons
 
