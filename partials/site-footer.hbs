@@ -6,7 +6,7 @@
         <div class="new-articles">
           <ul>
             {{#get "posts"}}
-              {{#foreach posts limit="7"}}
+              {{#foreach posts limit="10"}}
                 <li>
                   <h4><a href="{{url}}">{{title}}</a></h4>
                   <div class="read-next-card-meta">
@@ -29,11 +29,19 @@
       </section>
     </div>
     <div class="col">
-      <h3 class="col-title">Meenistry?</h3>
+      <div class="meenistry-logo">
+        <a href="https://meenistry.com"><img src="{{asset "meenistry-logo.png"}}" alt="Logo Meenistry"></a>
+      </div>
       <section class="col-content">
-        <p>Meenistry adalah aplikasi yang memudahkan anda dalam pencarian dan penyewaan ruang secara praktis, untuk
+        <p style="text-align: justify;">Meenistry adalah aplikasi yang memudahkan anda dalam pencarian dan penyewaan
+          ruang secara praktis, untuk
           kebutuhan meeting, kantor, co-working, pernikahan, arisan. Pakai Meenistry semua jadi beres.</p>
       </section>
+      <div class="fb-page" data-href="https://www.facebook.com/Meenistry/" data-tabs="" data-width="" data-height=""
+        data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+        <blockquote cite="https://www.facebook.com/Meenistry/" class="fb-xfbml-parse-ignore"><a
+            href="https://www.facebook.com/Meenistry/">Meenistry</a></blockquote>
+      </div>
     </div>
   </div>
 </div>

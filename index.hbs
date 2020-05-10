@@ -31,10 +31,10 @@ into the {body} of the default.hbs template --}}
     </div>
   </div>
 </main>
-<aside class="footer-block outer shadow">
+{{> site-header}}
+<aside class="footer-block index outer shadow">
   {{> site-footer}}
 </aside>
-{{> site-header}}
 {{!-- The #contentFor helper here will send everything inside it up to the matching #block helper found in default.hbs --}}
 {{#contentFor "scripts"}}
   <script>

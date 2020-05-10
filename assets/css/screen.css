@@ -95,8 +95,7 @@ body {
 
     .home-template .post-feed,
     .tag-template .post-feed,
-    .author-template .post-feed,
-    .footer-column-wrapper {
+    .author-template .post-feed {
         padding-top: 40px;
         /* padding: 40px 0 5vw; */
         border-top-left-radius: 3px;
@@ -1953,7 +1952,7 @@ Usage (In Ghost editor):
     display: flex;
     flex-wrap: wrap;
     margin: 0 -25px;
-    padding: 60px 0 0 0;
+    padding-top: 100px;
 }
 
 .read-next .post-card {
@@ -2130,7 +2129,7 @@ Usage (In Ghost editor):
 @media (max-width: 650px) {
     .read-next-feed {
         flex-direction: column;
-        padding: 25px 0 0;
+        padding: 60px 0 0;
     }
 
     .read-next-card {
@@ -2145,6 +2144,14 @@ Usage (In Ghost editor):
         margin: 25px;
         padding: 25px 0 0;
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .post-card-content {
+        padding-bottom: 25px;
+    }
+
+    .col {
+        padding: 0 20px 30px;
     }
 }
 
@@ -2920,6 +2927,15 @@ Usage (In Ghost editor):
     background: #090a0b;
 }
 
+.footer-block.tags,
+.footer-block.index,
+.footer-block.author {
+    margin-top: -41px;
+    z-index: 100;
+    background: #090a0b;
+    padding-top: 40px;
+}
+
 .shadow {
     -moz-box-shadow: 0 2px 1px 1px #000;
     -webkit-box-shadow: 0 2px 1px 1px #000;
@@ -2927,7 +2943,7 @@ Usage (In Ghost editor):
 }
 
 .footer-column {
-    padding: 60px 0;
+    padding: 0 0 60px 0;
     position: relative;
     display: flex;
     flex-wrap: wrap;
@@ -2938,18 +2954,24 @@ Usage (In Ghost editor):
     display: flex;
     flex-wrap: wrap;
     margin: 0 -20px;
-    padding: 50px 0 0;
+    padding: 40px 0 0;
 }
 
 .col {
     flex: 1 1 301px;
     flex-direction: column;
     overflow: hidden;
-    padding: 0 20px 40px;
+    padding: 0 20px 20px;
     min-height: 220px;
     background-size: cover;
     position: relative;
     display: flex;
+}
+
+.meenistry-logo {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
 }
 
 .col-title {
@@ -2971,6 +2993,10 @@ Usage (In Ghost editor):
 .col-content a:hover {
     text-decoration: none;
     color: rgba(255, 255, 255, 1);
+}
+
+.col-content.tags {
+    text-align: justify;
 }
 
 .col-content.tags a {
