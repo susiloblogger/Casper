@@ -1,7 +1,7 @@
 <div class="footer-column inner">
   <div class="footer-column-wrapper">
     <div class="col">
-      <h3 class="col-title">Artikel Terbaru</h3>
+      <h3 class="col-title">+ Artikel Terbaru</h3>
       <section class="col-content">
         <div class="new-articles">
           <ul>
@@ -22,11 +22,11 @@
     </div>
     <div class="col">
       <div class="sponsor">
-        <h3 class="col-title">Tautan Sponsor</h3>
+        <h3 class="col-title">@ Tautan Sponsor</h3>
         {{navigation type="secondary"}}
       </div>
       <div class="tags">
-        <h3 class="col-title">#Tags</h3>
+        <h3 class="col-title"># Tags</h3>
         <section class="col-content tags">
           {{#get "tags" limit="20"}}
             {{tags separator=" | "}}
@@ -35,10 +35,11 @@
       </div>
     </div>
     <div class="col">
-      <h3 class="col-title">Abi Usamah?</h3>
+      <h3 class="col-title">? Abi Usamah</h3>
       <section class="col-content">
-        <p style="text-align: justify;">Blog ini berisi sekelumit cerita Abi Usamah selama bermuamalah di dunia, semoga
-          ada hikmah dan manfaat yang dapat di ambil oleh para pembaca dari ceritanya.</p>
+        <p style="text-align: justify;">Blog ini berisi tentang perjalanan hidup <b>Abi Usamah</b> selama bermuamalah di
+          dunia, semoga kisah dan pengalamannya dapat bermanfaat untuk generasi selanjutnya.</p>
+        <p>Hubungi Abi: <a href="mailto:abiusamah.id@gmail.com">abiusamah.id@gmail.com</a></p>
         <div class="social-links">
           {{#if @site.facebook}}
             <a class="social-link social-link-fb" href="{{facebook_url @site.facebook}}" title="Facebook"

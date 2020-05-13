@@ -16,6 +16,14 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap"
     rel="stylesheet">
+  {{!-- DNS Prefetch --}}
+  <link rel="preconnect" href="https://fonts.googleapis.com/" crossorigin>
+  <link rel="preconnect" href="https://connect.facebook.net.com/" crossorigin>
+  <link rel="dns-prefetch" href="https://google-analytics.com/">
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com/">
+  <link rel="dns-prefetch" href="https://buttons.github.io/">
+  <link rel="dns-prefetch" href="https://fbcdn.net/">
+  <link rel="dns-prefetch" href="https://code.jquery.com/">
   {{!-- This tag outputs SEO meta+structured data and other important settings --}}
   {{ghost_head}}
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -78,7 +86,7 @@
       <div class="site-footer-content inner">
         <section class="copyright"><a href="{{@site.url}}">{{@site.title}}</a> &copy; {{date format="YYYY"}}</section>
         <nav class="site-footer-nav">
-          <a href="http://abiusamah.com/tentang-privasi-pribadi/">Privasi Pribadi</a>
+          <a href="https://abiusamah.com/tentang-privasi-pribadi/">Privasi</a>
           {{#if @site.facebook}}<a href="{{facebook_url @site.facebook}}" target="_blank"
               rel="noopener">Facebook</a>{{/if}}
           {{#if @site.twitter}}<a href="{{twitter_url @site.twitter}}" target="_blank" rel="noopener">Twitter</a>{{/if}}
